@@ -1,0 +1,34 @@
+.settings-options {
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-right: 280px;
+    margin-left: 40px;
+    max-width: 10000px;
+    min-width: 245px;
+
+
+    flex: 1;
+    display: flex;
+    align-items: normal;
+}
+
+.settings-option-title {
+    display: inline-block;
+    width: 120px;
+}
+
+.settings-options-input {
+    flex: 1;
+    height: 30px;
+    font-size: 20px;
+    max-width: 300px;
+    min-height: 32px;
+}
+
+.settings-option-avatar {
+    width: 150px;
+}
+
+.upload-avatar {
+    margin-left: 160px;
+}

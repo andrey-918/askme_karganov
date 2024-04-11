@@ -1,0 +1,135 @@
+.header {
+    font-family: Arial;
+    height: 70px;
+    min-width: 200px;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+
+    background-color: white;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: black;
+}
+
+.logo {
+    margin-left: 20px;
+    color: black;
+    font-size: 70px;
+    font-weight: bold;
+    white-space: nowrap;
+    font-family: Arial;
+}
+
+.header-middle {
+    flex: 1;
+    margin-left: 3vw;
+    margin-right: 8px;
+    max-width: 10000px;
+    min-width: 245px;
+    display: flex;
+    align-items: center;
+
+}
+
+.search-input {
+    flex: 1;
+    height: 55px;
+    padding-left: 10px;
+    font-size: 30px;
+    border: 1px solid rgb(192, 192, 192);
+    border-radius: 35px;
+    box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);
+    width: 0;
+}
+
+.search-input::placeholder {
+    font-size: 30px;
+}
+
+.ask-button {
+    display: flex;
+    margin-left: 5vw;
+    margin-right: 3vw;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    font-size: 20px;
+    flex-direction: row;
+    box-sizing: content-box;
+    height: 55px;
+    width: 55px;
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: green;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.20s;
+
+}
+
+.ask-button:hover {
+    background-color: #65af64;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.ask-button:active {
+    background-color: white;
+    color: green;
+}
+
+.avatar {
+    width: 55px;
+    height: 60px;
+    border-radius: 5px;
+}
+
+.profile {
+    width: 150px;
+    margin-right: 80px;
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+    grid-template-columns: 1px 1fr 1fr;
+}
+
+
+.links {
+    display: inline-block;
+    margin-right: 10px;
+    color: blue;
+    text-decoration: underline;
+    text-decoration-color: blue;
+    cursor: pointer;
+}
+
+.links:hover {
+    color: #969696;
+    cursor: pointer;
+}
+
+@media (max-width: 900px) {
+    .logo {
+        display: none;
+    }
+}
+
+@media (max-width: 500px) {
+    .avatar {
+        display: none;
+    }
+
+    .profile {
+        margin-left: -75px;
+        margin-right: 70px;
+    }
+}
