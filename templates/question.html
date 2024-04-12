@@ -114,155 +114,63 @@
 
 </nav>
 <div class="question-answers">
-<div class="main-post" style="margin-top: 100px; border:none;">
-    <div style="
-                width: 800px;
-                height: 400px;
-                margin-right: 20px;
-                ">
+    <div class="main-post" style="margin-top: 100px; border:none;">
         <div style="
-                    text-align: center;
+                    width: 800px;
+                    height: 400px;
+                    margin-right: 20px;
                     ">
-            <img class="post-photo" src="../static/images/avatar.jpg">
-        </div>
-        <div style="
-                    text-align: center;
-                    ">
-            <input class="post-rating" type="number" min="0" max="5"/>
-        </div>
-
-    </div>
-    <div class="post">
-        <div class="post-title" style="color: black">
-            Here is the question
-        </div>
-        <div class="post-text">
-            here is the text, somebody wrote something clever
-        </div>
-        <div class="post-bottom">
             <div style="
-                        display: inline-block;
+                        text-align: center;
                         ">
+                <img class="post-photo" src="../static/images/avatar.jpg">
+            </div>
+            <div style="
+                        text-align: center;
+                        ">
+                <input class="post-rating" type="number" min="0" max="5"/>
+            </div>
+
+        </div>
+        <div class="post">
+            <div class="post-title" style="color: black">
+                Here is the question
+            </div>
+            <div class="post-text">
+                here is the text, somebody wrote something clever
+            </div>
+            <div class="post-bottom">
                 <div style="
                             display: inline-block;
                             ">
-                    Tag:
-                </div>
-                <div style="
-                            display: inline-block;
-                            " class="links">
-                    first
-                </div>
-                <div style="
-                            display: inline-block;
-                            " class="links">
-                    second
-                </div>
-                <div style="
-                            display: inline-block;
-                            " class="links">
-                    third
+                    <div style="
+                                display: inline-block;
+                                ">
+                        Tag:
+                    </div>
+                    <div style="
+                                display: inline-block;
+                                " class="links">
+                        first
+                    </div>
+                    <div style="
+                                display: inline-block;
+                                " class="links">
+                        second
+                    </div>
+                    <div style="
+                                display: inline-block;
+                                " class="links">
+                        third
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-</div>
+    </div>
 </div>
 <div class="question-answers">
-    <div class="main-post">
-        <div style="
-                width: 300px;
-                height: 200px;
-                ">
-            <div style="
-                    text-align: center;
-                    ">
-                <img class="post-photo" src="../static/images/avatar.jpg">
-            </div>
-            <div style="
-                    text-align: center;
-                    ">
-                <input class="post-rating" type="number" min="0" max="5"/>
-            </div>
-
-        </div>
-        <div class="post">
-            <div class="post-text" style="height: 80%">
-                here is the text, somebody wrote something
-            </div>
-
-            <div style="display: inline;">
-                <input type="checkbox" class="larger">
-            </div>
-            <div style="display: inline; font-size: 42px; margin-left: 20px;">
-                Correct
-            </div>
-        </div>
-
-    </div>
-    <div class="main-post">
-        <div style="
-                width: 300px;
-                height: 200px;
-                ">
-            <div style="
-                    text-align: center;
-                    ">
-                <img class="post-photo" src="../static/images/avatar.jpg">
-            </div>
-            <div style="
-                    text-align: center;
-                    ">
-                <input class="post-rating" type="number" min="0" max="5"/>
-            </div>
-
-        </div>
-        <div class="post">
-            <div class="post-text" style="height: 80%">
-                here is the text, somebody wrote something
-            </div>
-
-            <div style="display: inline;">
-                <input type="checkbox" class="larger">
-            </div>
-            <div style="display: inline; font-size: 42px; margin-left: 20px;">
-                Correct
-            </div>
-        </div>
-
-    </div>
-    <div class="main-post">
-        <div style="
-                width: 300px;
-                height: 200px;
-                ">
-            <div style="
-                    text-align: center;
-                    ">
-                <img class="post-photo" src="../static/images/avatar.jpg">
-            </div>
-            <div style="
-                    text-align: center;
-                    ">
-                <input class="post-rating" type="number" min="0" max="5"/>
-            </div>
-
-        </div>
-        <div class="post">
-            <div class="post-text" style="height: 80%">
-                here is the text, somebody wrote something
-            </div>
-
-            <div style="display: inline;">
-                <input type="checkbox" class="larger">
-            </div>
-            <div style="display: inline; font-size: 42px; margin-left: 20px;">
-                Correct
-            </div>
-        </div>
-
-    </div>
+    {% include "layouts/answer-layout.html" %}
 </div>
 <div>
     <textarea style="height: 200px; width: 600px; margin-left: 40px; margin-top: 50px; font-size: 20px; border: 2px solid black">Enter your answer here.</textarea>
