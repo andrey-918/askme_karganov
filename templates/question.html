@@ -1,118 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Question</title>
-    <link rel="stylesheet" href="../static/css/header.css" />
-    <link rel="stylesheet" href="../static/css/right-section.css" />
-    <link rel="stylesheet" href="../static/css/ask.css" />
-    <link rel="stylesheet" href="../static/css/question.css" />
-    <link rel="stylesheet" href="../static/css/mainpage.css" />
-</head>
+{% extends "layouts/base.html" %}
+{% load static %}
+{% block content %}
+<body class="question-page">
 
-<body style="
-        padding-bottom: 50px;
-        font-family: Arial;
-        ">
-<header class="header">
-    <a style="text-decoration: none" href="index.html">
-        <div class="logo">DidNtAsk</div>
-    </a>
-
-    <div class="header-middle">
-        <input class="search-input" type="text" placeholder="Search" />
-
-        <a style="text-decoration: none" href="ask.html">
-            <button class="ask-button">ASK!</button>
-        </a>
-    </div>
-
-    <div style="
-      display: inline-block;
-      width: 200px;
-      height: 60px;
-      margin-left: 65px;
-      font-size: 20px;
-      align-content: center;
-      ">
-        <div class="links" style="
-        display: inline-block;
-        text-align: center;
-        margin-right: 10px;
-        " >Log In</div>
-        <div style="
-        display: inline-block;
-        text-align: center;
-        " class="links">Register</div>
-    </div>
-
-
-
-</header>
-<nav class="right-section">
-    <div class="right-section-title">
-        Popular Tags
-    </div>
-
-    <div style="
-                margin-right: 10px;
-                margin-bottom: 20px;
-                text-align: center;
-                ">
-        <div class="popular-tags">
-            vacations
-        </div>
-
-        <div class="popular-tags">
-            macintoch
-        </div>
-
-        <div class="popular-tags">
-            git
-        </div>
-
-        <div class="popular-tags">
-            apple
-        </div>
-
-        <div class="popular-tags">
-            unreal_engine
-        </div>
-
-        <div class="popular-tags">
-            javascript
-        </div>
-
-        <div class="popular-tags">
-            homework
-        </div>
-    </div>
-
-    <div style="
-                text-align: center;
-                align-content: center;
-                ">
-        <div class="right-section-title">
-            Best Members
-        </div>
-        <div class="best-member">
-            <span>ME</span>
-        </div>
-        <div class="best-member">
-            <span>UserName911</span>
-        </div>
-        <div class="best-member">
-            <span>BigJo</span>
-        </div>
-        <div class="best-member">
-            <span>Elon Muskul</span>
-        </div>
-        <div class="best-member">
-            <span>MichalJJordan</span>
-        </div>
-    </div>
-
-</nav>
 <div class="question-answers">
     <div class="main-post" style="margin-top: 100px; border:none;">
         <div style="
@@ -179,4 +69,4 @@
     <button class="question-button" style="width: 100px; margin-bottom: 80px; margin-left: 40px; margin-top: 20px">answer</button>
 </div>
 </body>
-</html>
+{% endblock %}

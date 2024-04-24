@@ -1,122 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Profile</title>
-    <link rel="stylesheet" href="../static/css/settings.css"/>
-    <link rel="stylesheet" href="../static/css/right-section.css"/>
-    <link rel="stylesheet" href="../static/css/header.css"/>
-    <link rel="stylesheet" href="fixed-sections.html"/>
-
-</head>
+{% extends "layouts/base.html" %}
+{% load static %}
+{% block content %}
 <body style="
         font-family: Arial;
         ">
-    <header class="header">
-        <a style="text-decoration: none" href="index.html">
-            <div class="logo">DidNtAsk</div>
-        </a>
-
-        <div class="header-middle">
-            <input class="search-input" type="text" placeholder="Search" />
-
-            <a style="text-decoration: none" href="ask.html">
-                <button class="ask-button">ASK!</button>
-            </a>
-        </div>
-
-
-        <div class="profile">
-            <div style="
-                        display: inline-block;
-                        margin-top: 4px;
-                    ">
-                <img class="avatar" src="../static/images/avatar.jpg">
-            </div>
-            <div style="
-                        display: inline-block;
-                        width: 200px;
-                        padding-left: 65px;
-                        font-size: 20px;
-                    ">
-                <div style="
-                            display: inline-block;
-                            margin-bottom: 3px;
-                        ">UserName911</div>
-                <div>
-                    <a style="text-decoration: none" href="settings.html">
-                        <div class="links" style="display: inline-block">Settings</div>
-                    </a>
-                    <div class="links" style="display: inline-block">Log out</div>
-                </div>
-
-            </div>
-        </div>
-    </header>
-    <nav class="right-section">
-        <div class="right-section-title">
-            Popular Tags
-        </div>
-
-        <div style="
-                    margin-right: 10px;
-                    margin-bottom: 20px;
-                    text-align: center;
-                    ">
-            <div class="popular-tags">
-                vacations
-            </div>
-
-            <div class="popular-tags">
-                macintoch
-            </div>
-
-            <div class="popular-tags">
-                git
-            </div>
-
-            <div class="popular-tags">
-                apple
-            </div>
-
-            <div class="popular-tags">
-                unreal_engine
-            </div>
-
-            <div class="popular-tags">
-                javascript
-            </div>
-
-            <div class="popular-tags">
-                homework
-            </div>
-        </div>
-
-        <div style="
-                    text-align: center;
-                    align-content: center;
-                    ">
-            <div class="right-section-title">
-                Best Members
-            </div>
-            <div class="best-member">
-                <span>ME</span>
-            </div>
-            <div class="best-member">
-                <span>UserName911</span>
-            </div>
-            <div class="best-member">
-                <span>BigJo</span>
-            </div>
-            <div class="best-member">
-                <span>Elon Muskul</span>
-            </div>
-            <div class="best-member">
-                <span>MichalJJordan</span>
-            </div>
-        </div>
-
-    </nav>
     <div style="
         font-size: 32px;
         margin-bottom: 50px;
@@ -158,4 +45,4 @@
         <input type="submit" value="Submit">
     </div>
 </body>
-</html>
+{% endblock %}

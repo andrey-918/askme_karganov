@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fbc86718-bf96-4526-b13d-df6f7d7e3e06" name="Changes" comment="finished hw1">
-      <change afterPath="$PROJECT_DIR$/templates/hot.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/layouts/answer-layout.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/layouts/question-layout.html" afterDir="false" />
+    <list default="true" id="fbc86718-bf96-4526-b13d-df6f7d7e3e06" name="Changes" comment="seminar 2">
+      <change afterPath="$PROJECT_DIR$/templates/layouts/pagination.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/askme_karganov/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/askme_karganov/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/mainpage.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/mainpage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/question.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/question.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/settings.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/settings.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ask.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ask.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/hot.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hot.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/layouts/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/layouts/question-layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/question-layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/question.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/question.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/settings.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/settings.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/tag-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tag-page.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +55,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="advanced.settings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -92,7 +101,14 @@
       <option name="project" value="LOCAL" />
       <updated>1712856512729</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="seminar 2">
+      <created>1712925902037</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1712925902038</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -112,6 +128,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="finished hw1" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished hw1" />
+    <MESSAGE value="seminar 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="seminar 2" />
   </component>
 </project>

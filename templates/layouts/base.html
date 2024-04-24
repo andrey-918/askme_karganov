@@ -4,25 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="../static/css/header.css" />
-    <link rel="stylesheet" href="../static/css/right-section.css" />
-    <link rel="stylesheet" href="../static/css/ask.css" />
+    <link rel="stylesheet" href="{% static 'css/header.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/right-section.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/ask.css' %}" />
     <link rel="stylesheet" href="{% static 'css/header.css' %}" />
     <link rel="stylesheet" href="{% static 'css/right-section.css' %}" />
     <link rel="stylesheet" href="{% static 'css/mainpage.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/question.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/settings.css' %}" />
 </head>
 <body>
 {% block content %}
 {% endblock %}
 <header class="header">
-  <a style="text-decoration: none" href="index.html">
+  <a style="text-decoration: none" href="{% url 'index' %}">
     <div class="logo">DidNtAsk</div>
   </a>
 
   <div class="header-middle">
     <input class="search-input" type="text" placeholder="Search" />
 
-    <a style="text-decoration: none" href="ask.html">
+    <a style="text-decoration: none" href="{% url 'ask' %}">
       <button class="ask-button">ASK!</button>
     </a>
   </div>
@@ -46,10 +48,10 @@
                             margin-bottom: 3px;
                         ">UserName911</div>
       <div>
-        <a style="text-decoration: none" href="settings.html">
-          <div class="links" style="display: inline-block">Settings</div>
+        <a style="text-decoration: none" href="{% url 'settings' %}">
+          <a class="links" style="display: inline-block" href="{% url 'settings' %}">Settings</a>
         </a>
-        <div class="links" style="display: inline-block">Log out</div>
+        <a class="links" style="display: inline-block" href="{% url 'login' %}">Log out</a>
       </div>
 
     </div>
@@ -65,33 +67,13 @@
                 margin-bottom: 20px;
                 text-align: center;
                 ">
-    <div class="popular-tags">
-      vacations
-    </div>
+    {% for tag in popular_tags %}
+      <a class="popular-tags" href="{% url 'tag-page' tag.id %}">
+        {{ tag.name }}
+      </a>
+    {% endfor %}
 
-    <div class="popular-tags">
-      macintoch
-    </div>
 
-    <div class="popular-tags">
-      git
-    </div>
-
-    <div class="popular-tags">
-      apple
-    </div>
-
-    <div class="popular-tags">
-      unreal_engine
-    </div>
-
-    <div class="popular-tags">
-      javascript
-    </div>
-
-    <div class="popular-tags">
-      homework
-    </div>
   </div>
 
   <div style="

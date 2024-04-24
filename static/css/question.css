@@ -5,6 +5,12 @@
     border: 1px solid red;
 }
 
+.question-page {
+    padding-bottom: 50px;
+    padding-right: 270px;
+    font-family: Arial;
+}
+
 .post-bottom {
     height: 100px;
 }
