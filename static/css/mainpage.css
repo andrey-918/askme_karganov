@@ -3,7 +3,7 @@
     height: 450px;
     display: flex;
     margin-bottom: 60px;
-    border: 2px solid green;
+    border: 2px solid black;
 }
 
 
@@ -45,8 +45,8 @@
     display: inline-block;
     border: 1px solid black;
     width: auto;
-    font-size: 30px;
-    height: 35px;
+    font-size: 40px;
+    height: 45px;
     text-align: center;
     cursor: pointer;
     margin-right: 10px;
@@ -54,7 +54,7 @@
 
 @media (max-width: 750px) {
     .post {
-    margin-top: 20px;
-    width: 2030px;
+        margin-top: 20px;
+        width: 200px;
     }
 }

@@ -106,9 +106,9 @@
 .links {
     display: inline-block;
     margin-right: 10px;
-    color: blue;
+    color: green;
     text-decoration: underline;
-    text-decoration-color: blue;
+    text-decoration-color: black;
     cursor: pointer;
 }
 

@@ -68,7 +68,7 @@
                 text-align: center;
                 ">
     {% for tag in popular_tags %}
-      <a class="popular-tags" href="{% url 'tag-page' tag.id %}">
+      <a class="popular-tags links" href="{% url 'tag-page' tag.id %}">
         {{ tag.name }}
       </a>
     {% endfor %}

@@ -18,7 +18,7 @@ QUESTIONS = [
         "text" : f"Question text number {i}",
         "photo" : "../static/images/avatar.jpg",
         "tags" : [1, 2, 3]
-    } for i in range(40)
+    } for i in range(400)
 ]
 
 
@@ -61,4 +61,5 @@ def register(request):
     return render(request, "register.html")
 
 def login(request):
-    return render(request, "login.html")
+    popular_tags = [TAGS[tag_id] for tag_id in range(10)]
+    return render(request, "login.html", {"popular_tags": popular_tags,})

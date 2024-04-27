@@ -129,6 +129,3 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-STATICFILIES_DIRS = [
-        BASE_DIR / "static",
-]

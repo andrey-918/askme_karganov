@@ -38,21 +38,9 @@
                                 ">
                         Tag:
                     </div>
-                    <div style="
-                                display: inline-block;
-                                " class="links">
-                        first
-                    </div>
-                    <div style="
-                                display: inline-block;
-                                " class="links">
-                        second
-                    </div>
-                    <div style="
-                                display: inline-block;
-                                " class="links">
-                        third
-                    </div>
+                    {% for tag_id in question.tags %}
+                        <a class="links" href="{% url 'tag-page' tag_id %}"> {{tag_id}}</a> <!-- не могу понять, как получить именя -->
+                    {% endfor %}
                 </div>
             </div>
         </div>
