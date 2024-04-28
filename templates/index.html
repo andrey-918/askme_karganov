@@ -26,7 +26,7 @@
         margin-right: 300px;
         ">
         {% for question in questions %}
-            {% include "layouts/question-layout.html" with item=question %}
+            {% include "layouts/question-layout.html" with item=question all_tags=tags%}
         {% endfor %}
 
     </div>
