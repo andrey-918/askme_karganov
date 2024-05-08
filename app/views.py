@@ -60,7 +60,6 @@ def question(request, question_id):
 
 def ask(request):
     popular_tags = [TAGS[tag_id] for tag_id in range(10)]
-    tags = [i for i in range (40)]
     return render(request, "ask.html", {"popular_tags":popular_tags, "tags": TAGS})
 
 def settings(request):
