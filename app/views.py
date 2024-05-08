@@ -17,8 +17,17 @@ QUESTIONS = [
         "title" : f"Question {i}",
         "text" : f"Question text number {i}",
         "photo" : "../static/images/avatar.jpg",
-        "tags" : [1, 2, 3]
+        "tags" : [1, 2, 3],
+        "answers": [x for x in range (0, i, 2)]
     } for i in range(400)
+]
+
+ANSWERS = [
+    {
+        "id": i,
+        "text": f"something clever #{i}",
+        "person_id": i,
+    } for i in range (40)
 ]
 
 def paginate(objects_list, request, per_page=10):
@@ -45,11 +54,13 @@ def hot(request):
 def question(request, question_id):
     item = QUESTIONS[question_id]
     popular_tags = [TAGS[tag_id] for tag_id in range(10)]
-    tags = [TAGS[tag_id] for tag_id in item["tags"]]
-    return render(request, "question.html", {"question": item, "popular_tags":popular_tags, "tags": TAGS})
+    ans = [ANSWERS[answer_id] for answer_id in QUESTIONS[question_id]["answers"]]
+    page_obj = paginate(ans, request, 5)
+    return render(request, "question.html", {"question": item, "popular_tags":popular_tags, "tags": TAGS, "answers": page_obj})
 
-def ask(request):
+def ask(request): #do nothing plz
     popular_tags = [TAGS[tag_id] for tag_id in range(10)]
+    tags = [i for i in range (40)]
     return render(request, "ask.html", {"popular_tags":popular_tags, "tags": TAGS})
 
 def settings(request):
