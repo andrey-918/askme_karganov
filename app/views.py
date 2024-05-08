@@ -58,7 +58,7 @@ def question(request, question_id):
     page_obj = paginate(ans, request, 5)
     return render(request, "question.html", {"question": item, "popular_tags":popular_tags, "tags": TAGS, "answers": page_obj})
 
-def ask(request): #do nothing plz
+def ask(request):
     popular_tags = [TAGS[tag_id] for tag_id in range(10)]
     tags = [i for i in range (40)]
     return render(request, "ask.html", {"popular_tags":popular_tags, "tags": TAGS})
