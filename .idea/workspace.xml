@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fbc86718-bf96-4526-b13d-df6f7d7e3e06" name="Changes" comment="started working with db:&#10;made models, added them in views.py">
+    <list default="true" id="fbc86718-bf96-4526-b13d-df6f7d7e3e06" name="Changes" comment="db in settings.py">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/askme_karganov/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/askme_karganov/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -143,7 +142,14 @@
       <option name="project" value="LOCAL" />
       <updated>1715191178473</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="db in settings.py">
+      <created>1715523675866</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1715523675866</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -169,6 +175,7 @@
     <MESSAGE value="made pagination for answers" />
     <MESSAGE value="made pagination" />
     <MESSAGE value="started working with db:&#10;made models, added them in views.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="started working with db:&#10;made models, added them in views.py" />
+    <MESSAGE value="db in settings.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="db in settings.py" />
   </component>
 </project>

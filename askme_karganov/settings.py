@@ -87,8 +87,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'askme_karganov_db',
         'USER': 'postgres',
-        'PASSWORD': 'first911',
+        'PASSWORD': '111',
         'HOST': 'localhost',
+        'PORT': '5433',
     }
 }
 # python3 manage.py migrate
