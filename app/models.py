@@ -82,12 +82,12 @@ class AnswerLike(models.Model):
 class QuestionLike(models.Model):
     user = models.ForeignKey(User, on_delete=models.PROTECT)
     question = models.ForeignKey(Question, on_delete=models.PROTECT)
-
+    name_of_me = 'andrey'
     class Meta:
         app_label = 'question_like'
+
         constraints = [
             models.UniqueConstraint(fields=['user', 'question'], name='unique_questionlike_user')
         ]
-
     def __str__(self):
         return self.user

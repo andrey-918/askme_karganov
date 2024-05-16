@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'app',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -85,7 +86,7 @@ WSGI_APPLICATION = 'askme_karganov.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'askme_karganov_db',
+        'NAME': 'postgres',
         'USER': 'postgres',
         'PASSWORD': '111',
         'HOST': 'localhost',
