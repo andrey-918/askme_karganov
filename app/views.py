@@ -52,32 +52,39 @@ def question(request, question_id):
 
 
 def ask(request):
-    popular_tags = ['starting tag']
-    # popular_tags = [models.Tag.objects.get(pk=tag_id) for tag_id in range(10)]
-    return render(request, "ask.html", {"popular_tags": popular_tags, "tags": ['starting tag']})
+    popular_tags = Tag.objects.get_popular()
+    context = {
+        "popular_tags": popular_tags,
+        "tags": Tag.objects.all(),
+    }
+    return render(request, "ask.html", context)
 
 
 def settings(request):
-    # popular_tags = [models.Tag.objects.get(pk=tag_id) for tag_id in range(10)]
-    popular_tags = ['starting tag']
-    return render(request, "settings.html", {"popular_tags": popular_tags, "tags": ['starting tag']})
-
+    popular_tags = Tag.objects.get_popular()
+    context = {
+        "popular_tags": popular_tags,
+        "tags": Tag.objects.all(),
+    }
+    return render(request, "settings.html", context)
 
 def tag_page(request, tag_id):
-    item = models.Tag.objects.get(tag_id)
-    popular_tags = ['starting tag']
-    # popular_tags = [models.Tag.objects.get(pk=tag_id) for tag_id in range(10)]
-    questions = [models.Question.objects.get(i) for i in item["questions"]]
+    item = Tag.objects.get(pk=tag_id)
+    popular_tags = Tag.objects.get_popular()
+    questions = [question for question in Question.objects.get_by_tag(tag=tag_id)]
     page_obj = paginate(questions, request)
-    return render(request, "tag-page.html",
-                  {"tag": item, "popular_tags": popular_tags, "tags": ['starting tag'], "questions": page_obj})
-
+    context = {
+        "tag": item,
+        "popular_tags": popular_tags,
+        "tags": Tag.objects.all(),
+        "questions": page_obj
+    }
+    return render(request, "tag-page.html", context)
 
 def register(request):
     return render(request, "register.html")
 
 
 def login(request):
-    # popular_tags = [models.Tag.objects.get(pk=tag_id) for tag_id in range(10)]
-    popular_tags = ['starting tag']
-    return render(request, "login.html", {"popular_tags": popular_tags, })
+    popular_tags = Tag.objects.get_popular()
+    return render(request, "login.html", {"popular_tags": popular_tags})

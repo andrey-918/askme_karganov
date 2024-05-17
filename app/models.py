@@ -15,7 +15,8 @@ class Profile(models.Model):
 
 class TagManager(models.Manager):
     def get_popular(self):
-        return self.order_by('-tag_posts')[:9]
+        return self.order_by('-tag_posts')[:10]
+
 
 
 class Tag(models.Model):
@@ -37,6 +38,9 @@ class QuestionManager(models.Manager):
 
     def get_hot(self):
         return self.order_by('-answer_count')
+
+    def get_by_tag(self, tag):
+        return self.filter(tags__id=tag).order_by('-created_at')
 
 
 class Question(models.Model):
