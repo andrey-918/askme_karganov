@@ -24,10 +24,10 @@
         </div>
         <div class="post">
             <div class="post-title" style="color: black">
-                Here is the question
+                {{ question.title }}
             </div>
             <div class="post-text">
-                here is the text, somebody wrote something clever
+                {{ question.text }}
             </div>
             <div class="post-bottom">
                 <div style="
@@ -38,8 +38,8 @@
                                 ">
                         Tag:
                     </div>
-                    {% for tag_id in question.tags %}
-                        <a class="links" href="{% url 'tag-page' tag_id %}"> {{tag_id}}</a> <!-- не могу понять, как получить именя -->
+                    {% for tag in question.tags.all %}
+                        <a class="links" href="{% url 'tag-page' tag.id %}"> {{tag}}</a> <!-- не могу понять, как получить именя -->
                     {% endfor %}
                 </div>
             </div>

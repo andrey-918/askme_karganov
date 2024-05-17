@@ -1,6 +1,8 @@
 from django.db import models
 from django.db.models import Count
 from django.contrib.auth.models import User
+from django.db.models import Sum, Prefetch
+from datetime import date
 
 
 class Profile(models.Model):
@@ -57,6 +59,10 @@ class Question(models.Model):
     objects = QuestionManager()
 
 
+    def calculate_rating(self):
+        score_sum = QuestionLike.objects.filter(question_id=self.id).aggregate(Sum('value', default=0))
+        return score_sum['value__sum']
+
     def __str__(self):
         return self.title
 
@@ -74,29 +80,36 @@ class Answer(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
+    def calculate_rating(self):
+        score_sum = AnswerLike.objects.filter(answer_id=self.id).aggregate(Sum('value', default=0))
+        return score_sum['value__sum']
+
 
 
     def __str__(self):
         return self.title
 
 class AnswerLike(models.Model):
-    user = models.ForeignKey(User, on_delete=models.PROTECT)
-    answer = models.ForeignKey(Answer, on_delete=models.PROTECT)
-
+    answer = models.ForeignKey(Answer, on_delete=models.CASCADE)
+    value = models.IntegerField(default=0)
+    user=models.ForeignKey(User, on_delete=models.CASCADE)
     class Meta:
         constraints = [
-            models.UniqueConstraint(fields=['user', 'answer'], name='unique_answerlike_user')
+            models.UniqueConstraint(fields=['user', 'answer'], name='unique_user_answer')
         ]
 
     def __str__(self):
-        return self.user
+        return str(self.answer_id)
 
 class QuestionLike(models.Model):
-    user = models.ForeignKey(User, on_delete=models.PROTECT)
-    question = models.ForeignKey(Question, on_delete=models.PROTECT)
+    question = models.ForeignKey(Question, on_delete=models.CASCADE)
+    value = models.IntegerField(default=0)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+
     class Meta:
         constraints = [
-            models.UniqueConstraint(fields=['user', 'question'], name='unique_questionlike_user')
+            models.UniqueConstraint(fields=['user', 'question'], name='unique_user_question')
         ]
+
     def __str__(self):
-        return self.user
+        return str(self.question_id)

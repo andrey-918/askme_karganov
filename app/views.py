@@ -43,7 +43,7 @@ def question(request, question_id):
     page_obj = paginate(ans, request, 5)
     popular_tags = Tag.objects.get_popular()
     context = {
-        "questions": item,
+        "question": item,
         "popular_tags": popular_tags,
         "tags": Tag.objects.all(),
         "answers": page_obj

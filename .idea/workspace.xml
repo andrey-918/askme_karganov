@@ -2,11 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fbc86718-bf96-4526-b13d-df6f7d7e3e06" name="Changes" comment="finished models and made fill_db.py">
+      <change afterPath="$PROJECT_DIR$/static/images/IMG_0895_cvdNjxK.JPG" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/management/commands/fill_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/management/commands/fill_db.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0002_answer_carma_question_carma_question_question_id.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/tag-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tag-page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/layouts/question-layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/question-layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/question.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/question.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +54,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/images" />
       <recent name="$PROJECT_DIR$/templates/layouts" />
     </key>
   </component>
@@ -183,7 +188,14 @@
       <option name="project" value="LOCAL" />
       <updated>1715954558335</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="finished models and made fill_db.py">
+      <created>1715956291617</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1715956291617</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="UnknownFeatures">

@@ -20,7 +20,9 @@ class Command(BaseCommand):
         Profile.objects.all().delete()
         Tag.objects.all().delete()
         Question.objects.all().delete()
+        QuestionLike.objects.all().delete()
         Answer.objects.all().delete()
+        AnswerLike.objects.all().delete()
         User.objects.all().delete()
         User.objects.create_superuser(username='andreykarganov', password='111')
         print('FINISHED DELETING')
@@ -64,8 +66,6 @@ class Command(BaseCommand):
                 title=f"Question #{i}",
                 text=f"this question is {i} times better then the prev",
                 creator=profiles_to_create[i % ratio],
-                carma=(((i + 191) * 7) % 257),
-                answer_count=(i * 29) % ratio,
             )
             for i in range(ratio * 10)
         ]
@@ -79,12 +79,33 @@ class Command(BaseCommand):
                 creator=profiles_to_create[i % ratio],
                 question=questions_to_create[i % (ratio * 10)],
                 truth_checkbox=True,
-                carma=(((i + 91) * 51) % 41),
             )
             for i in range(ratio * 100)
         ]
         Answer.objects.bulk_create(answers_to_create)
         print('Created Answers')
+
+        answersLikes = [
+            AnswerLike(
+                user=users_to_create[(i * 91 + 321) % ratio],
+                answer=answers_to_create[(i * 41 + 211) % (ratio * 10)],
+                value=(i*91 + 29) % 6
+            )
+            for i in range(ratio * 200)
+        ]
+        AnswerLike.objects.bulk_create(answersLikes)
+        print('Created AnswersLikes')
+
+        questionsLikes = [
+            QuestionLike(
+                user=users_to_create[(i * 91 + 321) % ratio],
+                question=questions_to_create[(i * 41 + 211) % (ratio * 10)],
+                value=(i * 91 + 29) % 6
+            )
+            for i in range(ratio * 200)
+        ]
+        QuestionLike.objects.bulk_create(questionsLikes)
+        print('Created QuestionsLikes')
 
         print('ALL CREATED SUCCESSFULY')
 
