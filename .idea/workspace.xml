@@ -2,15 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fbc86718-bf96-4526-b13d-df6f7d7e3e06" name="Changes" comment="finished models and made fill_db.py">
-      <change afterPath="$PROJECT_DIR$/static/images/IMG_0895_cvdNjxK.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/migrations/0002_customuser_alter_questionlike_question.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/migrations/0003_alter_profile_avatar_delete_customuser.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/migrations/0004_alter_profile_avatar.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/migrations/0005_alter_profile_avatar.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/avatars/avatar.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/management/commands/fill_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/management/commands/fill_db.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0002_answer_carma_question_carma_question_question_id.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IMG_0895.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/media/avatars/IMG_0895_R2b9IEo.JPG" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/askme_karganov/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/askme_karganov/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/IMG_0895_cvdNjxK.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/avatar.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/layouts/answer-layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/answer-layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/layouts/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/layouts/question-layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/question-layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/question.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/question.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/register.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,8 +65,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/media" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/static/avatars" />
       <recent name="$PROJECT_DIR$/static/images" />
-      <recent name="$PROJECT_DIR$/templates/layouts" />
+      <recent name="$PROJECT_DIR$/uploads/avatars" />
     </key>
   </component>
   <component name="RunManager">
@@ -195,7 +209,14 @@
       <option name="project" value="LOCAL" />
       <updated>1715956291617</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="finished models and made fill_db.py">
+      <created>1715977282894</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1715977282894</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="UnknownFeatures">

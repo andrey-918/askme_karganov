@@ -11,7 +11,7 @@
         margin-left: 40px;
         padding-top: 100px;
         ">
-    Log In
+    Sing Up
 </div>
 
 <div style="
@@ -21,56 +21,53 @@
   ">
     Sorry, this email address allready registred!
 </div>
+<form method="post" action="">
+  {% csrf_token %}
 <div class="settings-options">
     <div class="settings-option-title">
         Login
     </div>
-    <input type="text" class="settings-options-input" maxlength="20" value="reuffe"/>
+    <input type="text" class="settings-options-input" maxlength="20" name="username"/>
 </div>
 
 <div class="settings-options">
     <div class="settings-option-title">
         Email
     </div>
-    <input type="text" class="settings-options-input" maxlength="50" value="easypandaoo@gmail.com"/>
+    <input type="text" class="settings-options-input" maxlength="50" name="email"/>
 </div>
 
-<div class="settings-options">
-    <div class="settings-option-title">
-        NickName
-    </div>
-    <input type="text" class="settings-options-input" maxlength="50" value="Reufe"/>
-</div>
 
 <div class="settings-options">
     <div class="settings-option-title">
         Password
     </div>
-    <input type="password" class="settings-options-input" maxlength="50" value="Reufe123"/>
+    <input type="password" class="settings-options-input" maxlength="50" name="password"/>
 </div>
 
 <div class="settings-options">
     <div class="settings-option-title">
         Repeat password
     </div>
-    <input type="password" class="settings-options-input" maxlength="50" value="Reufe123"/>
+    <input type="password" class="settings-options-input" maxlength="50" name="repeat_password"/>
 </div>
 <div class="settings-options">
     <div class="settings-option-title">
         Upload avatar
     </div>
     <div>
-        <input type="file" name="fileToUpload">
-        <input type="submit" value="Submit">
+        <input type="file" name="avatar">
     </div>
 </div>
-
-
-<div style="
+    <div style="
   margin-left: 20px;
   ">
     <button class="question-button" style="width: 100px; margin-bottom: 80px">Register</button>
 </div>
+</form>
+
+
+
 
 
 </body>

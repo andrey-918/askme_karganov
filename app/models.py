@@ -1,12 +1,9 @@
 from django.db import models
-from django.db.models import Count
 from django.contrib.auth.models import User
-from django.db.models import Sum, Prefetch
-from datetime import date
-
+from django.db.models import Sum
 
 class Profile(models.Model):
-    avatar = models.ImageField(null=True, blank=True)
+    avatar = models.ImageField(upload_to='avatars/', default='avatars/avatar.png')
     user = models.OneToOneField(User, on_delete=models.PROTECT)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -113,3 +110,4 @@ class QuestionLike(models.Model):
 
     def __str__(self):
         return str(self.question_id)
+

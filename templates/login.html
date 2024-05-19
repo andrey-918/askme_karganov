@@ -14,39 +14,45 @@
   Log In
 </div>
 
-<div style="
+<!--<div style="
   color: red;
   margin-left: 40px;
   margin-bottom: 50px;
   ">
   Sorry, wrong password!
 </div>
-<div class="settings-options">
-  <div class="settings-option-title">
-    Login
+-->
+<form method="post" action="">
+  {% csrf_token %}
+  <div class="settings-options">
+    <label for="usernameInput" class="settings-option-title">
+      Login
+    </label>
+    <input type="text" name="username" class="settings-options-input" maxlength="20" id="usernameInput"/>
   </div>
-  <input type="text" class="settings-options-input" maxlength="20" value="reuffe"/>
-</div>
 
-<div class="settings-options">
-  <div class="settings-option-title">
-    Password
+  <div class="settings-options">
+    <label for="passwordInput" class="settings-option-title">
+      Password
+    </label>
+    <input type="password" name="password" class="settings-options-input" maxlength="50" id="passwordInput"/>
   </div>
-  <input type="password" class="settings-options-input" maxlength="50" value="12345678"/>
-</div>
 
-<div style="
+  <div style="
   margin-left: 20px;
   ">
-<button class="question-button">Log In</button>
-</div>
+    <button class="question-button">Log In</button>
+  </div>
+</form>
 
-<div class="links" style="
+
+
+<a class="links" style="
   margin-left: 160px;
   margin-top: 30px;
-  ">
+  " href="{% url 'register' %}">
   create new account
-</div>
+</a>
 
 
 </body>

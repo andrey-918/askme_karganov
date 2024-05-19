@@ -23,19 +23,30 @@
 
   <div class="header-middle">
     <input class="search-input" type="text" placeholder="Search" />
-
-    <a style="text-decoration: none" href="{% url 'ask' %}">
-      <button class="ask-button">ASK!</button>
-    </a>
+    {% if request.user.is_authenticated %}
+      <a style="text-decoration: none" href="{% url 'ask' %}">
+        <button class="ask-button">ASK!</button>
+      </a>
+    {% else %}
+      <a style="text-decoration: none" href="{% url 'log_in' %}">
+        <button class="ask-button">ASK!</button>
+      </a>
+      <a style="text-decoration: none" href="{% url 'log_in' %}">
+        <a class="links" style="display: inline-block" href="{% url 'log_in' %}">Login</a>
+      </a>
+      <a style="text-decoration: none" href="{% url 'register' %}">
+        <a class="links" style="display: inline-block" href="{% url 'register' %}">Register</a>
+      </a>
+    {% endif %}
   </div>
 
-
+  {% if request.user.is_authenticated %}
   <div class="profile">
     <div style="
                         display: inline-block;
                         margin-top: 4px;
                     ">
-      <img class="avatar" src="../static/images/avatar.jpg">
+      <img class="avatar" src="{{ request.user.profile.avatar.url }}">
     </div>
     <div style="
                         display: inline-block;
@@ -46,13 +57,14 @@
       <div style="
                             display: inline-block;
                             margin-bottom: 3px;
-                        ">UserName911</div>
+                        ">{{ request.user.username }}</div>
       <div>
         <a style="text-decoration: none" href="{% url 'settings' %}">
           <a class="links" style="display: inline-block" href="{% url 'settings' %}">Settings</a>
         </a>
-        <a class="links" style="display: inline-block" href="{% url 'login' %}">Log out</a>
+        <a class="links" style="display: inline-block" href="{% url 'logout' %}">Log out</a>
       </div>
+      {% endif %}
 
     </div>
   </div>

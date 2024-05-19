@@ -1,5 +1,13 @@
+from django.contrib import auth
+from django.contrib.auth import authenticate, login
 from django.core.paginator import Paginator
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.urls import reverse
+from django.views.decorators.csrf import csrf_exempt
+from django.views.decorators.http import require_http_methods
+from django.conf import settings
+
+from .forms import LoginForm, RegisterForm
 from .models import Tag, Question, Answer, Profile
 
 
@@ -82,9 +90,33 @@ def tag_page(request, tag_id):
     return render(request, "tag-page.html", context)
 
 def register(request):
-    return render(request, "register.html")
+    if request.method == 'GET':
+        user_form = RegisterForm()
+    if request.method == 'POST':
+        user_form = RegisterForm(request.POST)
+        if user_form.is_valid():
+            user = user_form.save()
+            if user:
+                return redirect(reverse('index'))
+            else:
+                user_form.add_error(field=None, error="User saving error!")
+    return render(request, "register.html", {'form': user_form})
 
 
-def login(request):
-    popular_tags = Tag.objects.get_popular()
-    return render(request, "login.html", {"popular_tags": popular_tags})
+
+def logout(request):
+    auth.logout(request)
+    return redirect(reverse('log_in'))
+
+def log_in(request):
+    if request.method == 'GET':
+        login_form = LoginForm()
+    if request.method == 'POST':
+        login_form = LoginForm(data=request.POST)
+        if login_form.is_valid():
+            user = authenticate(request, **login_form.cleaned_data)
+            if user:
+                login(request, user)
+                return redirect(reverse('index'))
+        print('Failed to login')
+    return render(request, "login.html", context={"form": login_form, "popular_tags":Tag.objects.get_popular()})
