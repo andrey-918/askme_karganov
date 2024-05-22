@@ -13,7 +13,7 @@
             <div style="
                         text-align: center;
                         ">
-                <img class="post-photo" src="{{ question.author.avatar }}">
+                <img class="post-photo" src="{{ question.creator.avatar.url }}">
             </div>
             <div style="
                         text-align: center;
@@ -52,12 +52,17 @@
         {% include "layouts/answer-layout.html" with item=answer %}
     {% endfor %}
 </div>
-<div>
-    <textarea style="height: 200px; width: 600px; margin-left: 40px; margin-top: 50px; font-size: 20px; border: 2px solid black">Enter your answer here.</textarea>
-</div>
-<div>
+<form action="{{ question.get_url }}" method="POST">
+    {% csrf_token %}
+    <div>
+        <textarea name='text' style="height: 200px; width: 600px; margin-left: 40px; margin-top: 50px; font-size: 20px; border: 2px solid black">
+            Enter your answer here.
+        </textarea>
+    </div>
+    <div>
     <button class="question-button" style="width: 100px; margin-bottom: 80px; margin-left: 40px; margin-top: 20px">answer</button>
 </div>
+</form>
 {% include "layouts/pagination.html"  with page_obj=answers%}
 </body>
 {% endblock %}

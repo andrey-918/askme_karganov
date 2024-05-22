@@ -71,14 +71,15 @@ class Command(BaseCommand):
         ]
         Question.objects.bulk_create(questions_to_create)
         print('Created Questions')
+        for question in Question.objects.all():
+            i = question.question_id
+            question.tags.set([tags_to_create[j] for j in range(0, i % ratio, (i * 51) % 11  + 1)])
 
         answers_to_create = [
             Answer(
-                title=f"Answer #{i}",
                 text=f"This is text answer #{i}",
                 creator=profiles_to_create[i % ratio],
                 question=questions_to_create[i % (ratio * 10)],
-                truth_checkbox=True,
             )
             for i in range(ratio * 100)
         ]

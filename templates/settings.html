@@ -10,39 +10,49 @@
         margin-left: 40px;
         padding-top: 100px;
         ">
-        Settings: UserName911
+        Settings: {{ request.user.username }}
     </div>
-
+    <form method="post" action="">
+          {% csrf_token %}
     <div class="settings-options">
         <div class="settings-option-title">
-            Login
+            Username
         </div>
-        <input type="text" class="settings-options-input" maxlength="20" value="Reufee"/>
+        <input type="text" class="settings-options-input" maxlength="20" name="username" value="{{request.user.username}}"/>
     </div>
 
     <div class="settings-options">
         <div class="settings-option-title">
             Email
         </div>
-        <input type="text" class="settings-options-input" maxlength="50" value="easypandaoo@gmail.com"/>
+        <input type="text" class="settings-options-input" maxlength="50" name="email" value="{{request.user.email}}"/>
     </div>
 
     <div class="settings-options">
         <div class="settings-option-title">
-            NickName
+            First name
         </div>
-        <input type="text" class="settings-options-input" maxlength="25" value="UserName911"/>
+        <input type="text" class="settings-options-input" maxlength="25" name="first_name" value="{{request.user.first_name}}"/>
+    </div>
+    <div class="settings-options">
+        <div class="settings-option-title">
+            Last name
+        </div>
+        <input type="text" class="settings-options-input" maxlength="25" name="last_name" value="{{request.user.last_name}}"/>
     </div>
 
     <div class="settings-options">
         <div class="settings-option-title">
             Avatar
         </div>
-        <img class="settings-option-avatar" src="../static/images/avatar.jpg">
+        <img class="settings-option-avatar" src="{{ request.user.profile.avatar.url }}">
     </div>
     <div class="upload-avatar">
-        <input type="file" name="fileToUpload">
-        <input type="submit" value="Submit">
+        <input type="file" name="avatar">
+        <button type="submit" name="submit">
+            SUBMIT
+        </button>
     </div>
+    </form>
 </body>
 {% endblock %}

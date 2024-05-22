@@ -14,30 +14,33 @@
         ">
         New Question
     </div>
+    <form method="post" action="">
+          {% csrf_token %}
     <div class="question">
         <div class="name-of-input">
             Title
         </div>
-        <textarea class="title-question-input" maxlength='80'></textarea>
+        <input class="title-question-input" maxlength='80' name="title"></input>
     </div>
 
     <div class="question">
         <div class="name-of-input">
             Text
         </div>
-        <textarea class="text-question-input"></textarea>
+        <textarea class="text-question-input" name="text"></textarea>
     </div>
 
     <div class="question">
         <div class="name-of-input">
             Tags
         </div>
-        <textarea class="tags-question-input"></textarea>
+        <textarea class="tags-question-input" name="tags"></textarea>
     </div>
 
     <button class="question-button">
         ASK
     </button>
+    </form>
 
 </div>
 </body>

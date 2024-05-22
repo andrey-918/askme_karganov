@@ -1,6 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.db.models import Sum
+from django.urls import reverse
+
 
 class Profile(models.Model):
     avatar = models.ImageField(upload_to='avatars/', default='avatars/avatar.png')
@@ -16,11 +18,19 @@ class TagManager(models.Manager):
     def get_popular(self):
         return self.order_by('-tag_posts')[:10]
 
+    def create_question(self, tags_list):
+        tags = self.filter(name__in=tags_list)
+        for tag in tags:
+            tag.tag_posts += 1
+            tag.save()
+        return tags
+
+
+
 
 
 class Tag(models.Model):
     name = models.CharField(max_length=255)
-    id = models.IntegerField(primary_key=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     tag_posts = models.IntegerField(default=0)
@@ -42,6 +52,7 @@ class QuestionManager(models.Manager):
         return self.filter(tags__id=tag).order_by('-created_at')
 
 
+
 class Question(models.Model):
     question_id = models.IntegerField(default=0)
     title = models.CharField(max_length=255)
@@ -55,7 +66,8 @@ class Question(models.Model):
 
     objects = QuestionManager()
 
-
+    def get_url(self):
+        return reverse('question', kwargs={'question_id': self.id})
     def calculate_rating(self):
         score_sum = QuestionLike.objects.filter(question_id=self.id).aggregate(Sum('value', default=0))
         return score_sum['value__sum']
@@ -67,15 +79,17 @@ class Question(models.Model):
 
 
 
+
+
 class Answer(models.Model):
-    title = models.CharField(max_length=255)
     text = models.CharField(max_length=1024)
-    truth_checkbox = models.BooleanField()
     creator = models.ForeignKey(Profile, on_delete=models.CASCADE)
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
     carma = models.IntegerField(default=0)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+    objects = QuestionManager()
 
     def calculate_rating(self):
         score_sum = AnswerLike.objects.filter(answer_id=self.id).aggregate(Sum('value', default=0))
@@ -84,7 +98,7 @@ class Answer(models.Model):
 
 
     def __str__(self):
-        return self.title
+        return self.question.title
 
 class AnswerLike(models.Model):
     answer = models.ForeignKey(Answer, on_delete=models.CASCADE)

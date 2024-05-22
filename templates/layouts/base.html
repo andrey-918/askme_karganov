@@ -23,14 +23,10 @@
 
   <div class="header-middle">
     <input class="search-input" type="text" placeholder="Search" />
-    {% if request.user.is_authenticated %}
       <a style="text-decoration: none" href="{% url 'ask' %}">
         <button class="ask-button">ASK!</button>
       </a>
-    {% else %}
-      <a style="text-decoration: none" href="{% url 'log_in' %}">
-        <button class="ask-button">ASK!</button>
-      </a>
+    {% if not request.user.is_authenticated %}
       <a style="text-decoration: none" href="{% url 'log_in' %}">
         <a class="links" style="display: inline-block" href="{% url 'log_in' %}">Login</a>
       </a>
