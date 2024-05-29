@@ -5,46 +5,7 @@
 
 <div class="question-answers">
     <div class="main-post" style="margin-top: 100px; border:none;">
-        <div style="
-                    width: 800px;
-                    height: 400px;
-                    margin-right: 20px;
-                    ">
-            <div style="
-                        text-align: center;
-                        ">
-                <img class="post-photo" src="{{ question.creator.avatar.url }}">
-            </div>
-            <div style="
-                        text-align: center;
-                        ">
-                <input class="post-rating" type="number" min="0" max="5"/>
-            </div>
-
-        </div>
-        <div class="post">
-            <div class="post-title" style="color: black">
-                {{ question.title }}
-            </div>
-            <div class="post-text">
-                {{ question.text }}
-            </div>
-            <div class="post-bottom">
-                <div style="
-                            display: inline-block;
-                            ">
-                    <div style="
-                                display: inline-block;
-                                ">
-                        Tag:
-                    </div>
-                    {% for tag in question.tags.all %}
-                        <a class="links" href="{% url 'tag-page' tag.id %}"> {{tag}}</a> <!-- не могу понять, как получить именя -->
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
-
+        {% include "layouts/question-layout.html" with item=question %}
     </div>
 </div>
 <div class="question-answers">

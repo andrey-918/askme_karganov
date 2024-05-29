@@ -3,7 +3,7 @@ from app.models import Question
 from app.models import Answer
 from app.models import Tag
 # from app.models import Status
-from app.models import QuestionLike, Answer, AnswerLike, Profile, Tag
+from app.models import AnswerLike, Answer, QuestionLike, Profile, Tag
 from django.contrib.auth.models import User
 
 
@@ -86,27 +86,6 @@ class Command(BaseCommand):
         Answer.objects.bulk_create(answers_to_create)
         print('Created Answers')
 
-        answersLikes = [
-            AnswerLike(
-                user=users_to_create[(i * 91 + 321) % ratio],
-                answer=answers_to_create[(i * 41 + 211) % (ratio * 10)],
-                value=(i*91 + 29) % 6
-            )
-            for i in range(ratio * 200)
-        ]
-        AnswerLike.objects.bulk_create(answersLikes)
-        print('Created AnswersLikes')
-
-        questionsLikes = [
-            QuestionLike(
-                user=users_to_create[(i * 91 + 321) % ratio],
-                question=questions_to_create[(i * 41 + 211) % (ratio * 10)],
-                value=(i * 91 + 29) % 6
-            )
-            for i in range(ratio * 200)
-        ]
-        QuestionLike.objects.bulk_create(questionsLikes)
-        print('Created QuestionsLikes')
 
         print('ALL CREATED SUCCESSFULY')
 

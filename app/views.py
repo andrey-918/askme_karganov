@@ -4,15 +4,40 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.core.paginator import Paginator
 from django.forms import model_to_dict
-from django.http import HttpResponseRedirect
-from django.shortcuts import render, redirect
+from django.http import HttpResponseRedirect, JsonResponse
+from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse
-from django.views.decorators.csrf import csrf_exempt
-from django.views.decorators.http import require_http_methods
+from django.views.decorators.csrf import csrf_exempt, csrf_protect
+from django.views.decorators.http import require_http_methods, require_POST
 from django.conf import settings
 
 from .forms import LoginForm, RegisterForm, AskForm, SettingsForm, AnswerForm
-from .models import Tag, Question, Answer, Profile
+from .models import Tag, Question, Answer, Profile, QuestionLike, AnswerLike
+
+
+class HttpResponseAjax(JsonResponse):
+    def __init__(self, status='ok', **kwargs):
+        kwargs['status'] = status
+        super().__init__(kwargs)
+
+
+class HttpResponseAjaxError(HttpResponseAjax):
+    def __init__(self, code, message):
+        super().__init__(
+            status='error', code=code, message=message
+        )
+
+def login_required_ajax(view):
+    def view2(request, *args, **kwargs):
+        if request.user.is_authenticated:
+            return view(request, *args, **kwargs)
+        elif request.is_ajax():
+            return HttpResponseAjaxError(
+                code="no_auth",
+                message=u'Login required',
+            )
+
+    return view2
 
 
 def paginate(objects_list, request, per_page=10):
@@ -103,12 +128,12 @@ def settings(request):
         user = request.user
         name = user.username
         email= user.email
-        # profile = Profile.objects.get(user=user)
+        profile = Profile.objects.get(user=user)
         form = SettingsForm(initial=initial_data,
             data={
             'username': name,
             'email': email,
-            # 'avatar': request.user.profile.avatar
+            'avatar': request.user.profile.avatar
             })
     elif request.method == 'POST':
         form = SettingsForm(data=request.POST, instance=request.user, files=request.FILES)
@@ -116,6 +141,10 @@ def settings(request):
             print(form.cleaned_data)
             user.username = form.cleaned_data['username']
             user.email = form.cleaned_data['email']
+            if form.cleaned_data['avatar']:
+                profile = user.profile
+                profile.avatar = form.cleaned_data['avatar']
+                profile.save()
             user.save()
             form.save()
             return redirect(reverse('settings'))
@@ -149,10 +178,10 @@ def register(request):
             user = user_form.save()
             if user:
                 login(request, user)
-                return redirect(reverse('index'))
+                return redirect(reverse('settings'))
             else:
                 user_form.add_error(field=None, error="User saving error!")
-    return render(request, "register.html", {'form': user_form})
+    return render(request, "register.html", {'form': user_form, "popular_tags": Tag.objects.get_popular()})
 
 def logout(request):
     auth.logout(request)
@@ -170,3 +199,76 @@ def log_in(request):
                 return redirect(reverse('index'))
         print('Failed to login')
     return render(request, "login.html", context={"form": login_form, "popular_tags":Tag.objects.get_popular()})
+
+
+@login_required_ajax
+@require_POST
+def answer_correct(request):
+    print(request.POST)
+    try:
+        answer_id = request.POST['id']
+        answer = Answer.objects.get(id=answer_id)
+        if answer.question_id.profile_id == request.user.profile:
+            answer.change_mind_correct()
+            answer.save()
+            return HttpResponseAjax()
+    except Answer.DoesNotExist:
+        return HttpResponseAjaxError(code='bad_params', message='this answer is in an invalid state or does not exist')
+
+
+@login_required_ajax
+@require_POST
+def question_vote(request):
+    print(request.POST)
+    if request.POST['action'] == "like":
+        action = True
+    else:
+        action = False
+    try:
+        like = QuestionLike.objects.get(profile_id=request.user.profile,
+                                        question_id=Question.objects.get(id=request.POST['id']))
+
+        if like.is_like == action:
+            return HttpResponseAjax(new_rating=like.delete())
+
+        like.change_mind()
+        like.save()
+        return HttpResponseAjax(new_rating=Question.objects.get(id=request.POST['id']).rating)
+
+    except QuestionLike.DoesNotExist:
+        like = QuestionLike.objects.create(profile_id=request.user.profile,
+                                           question_id=Question.objects.get(id=request.POST['id']),
+                                           is_like=action)
+        like.save()
+        return HttpResponseAjax(new_rating=Question.objects.get(id=request.POST['id']).rating)
+    except QuestionLike.MultipleObjectsReturned:
+        return HttpResponseAjaxError(code='bad_params', message='Something is wrong with request. You can try again!')
+
+
+@login_required_ajax
+@require_POST
+def answer_vote(request):
+    print(request.POST)
+    if request.POST['action'] == "like":
+        action = True
+    else:
+        action = False
+    try:
+        like = AnswerLike.objects.get(profile_id=request.user.profile,
+                                      answer_id=Answer.objects.get(id=request.POST['id']))
+
+        if like.is_like == action:
+            return HttpResponseAjax(new_rating=like.delete())
+
+        like.change_mind()
+        like.save()
+        return HttpResponseAjax(new_rating=Answer.objects.get(id=request.POST['id']).rating)
+
+    except AnswerLike.DoesNotExist:
+        like = AnswerLike.objects.create(profile_id=request.user.profile,
+                                         answer_id=Answer.objects.get(id=request.POST['id']),
+                                         is_like=action)
+        like.save()
+        return HttpResponseAjax(new_rating=Answer.objects.get(id=request.POST['id']).rating)
+    except AnswerLike.MultipleObjectsReturned:
+        return HttpResponseAjaxError(code='bad_params', message='Something is wrong with request. You can try again!')

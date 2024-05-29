@@ -12,7 +12,7 @@
         ">
         Settings: {{ request.user.username }}
     </div>
-    <form method="post" action="">
+    <form method="post" action="" enctype="multipart/form-data">
           {% csrf_token %}
     <div class="settings-options">
         <div class="settings-option-title">
@@ -40,6 +40,7 @@
         </div>
         <input type="text" class="settings-options-input" maxlength="25" name="last_name" value="{{request.user.last_name}}"/>
     </div>
+
 
     <div class="settings-options">
         <div class="settings-option-title">
