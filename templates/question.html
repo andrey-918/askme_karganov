@@ -65,4 +65,10 @@
 </form>
 {% include "layouts/pagination.html"  with page_obj=answers%}
 </body>
+<script src="{% static 'js/answer.js' %}"></script>
+    <script src="{% static 'js/jquery-3.6.0.min.js'%}"></script>
+    <script src="{% static 'js/get_cookie.js'%} "></script>
+    <script src="{% static 'js/vote_question.js'%} "></script>
+    <script src="{% static 'js/vote_answer.js'%} "></script>
+    <script src="{% static 'js/is_answer_correct.js'%} "></script>
 {% endblock %}

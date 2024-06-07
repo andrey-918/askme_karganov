@@ -1,27 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fbc86718-bf96-4526-b13d-df6f7d7e3e06" name="Changes" comment="made login logout and register">
-      <change afterPath="$PROJECT_DIR$/app/migrations/0012_remove_answer_truth_checkbox.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/migrations/0013_remove_answer_title.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/migrations/0014_answer_answer_id.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/migrations/0015_remove_answer_answer_id.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/avatars/IMG_0895.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/avatars/IMG_0895_cKEzjvr.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/avatars/IMG_0895_kmRmWu8.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/avatars/IMG_0895_uSPUbOg.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/avatars/IMG_0895_wvXkKnG.JPG" afterDir="false" />
+    <list default="true" id="fbc86718-bf96-4526-b13d-df6f7d7e3e06" name="Changes" comment="dz5">
+      <change afterPath="$PROJECT_DIR$/media/avatars/3005.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/avatars/IMG_0739.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/avatars/IMG_0786.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/avatars/IMG_0876.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/avatars/IMG_0876_va5PRBS.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/avatars/IMG_0895_fTpdTMV.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/avatars/IMG_0895_k4wmdyv.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/avatars/IMG_0895_l2TlKM1.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/avatars/IMG_0895_u8eZ8ds.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/avatars/Без_заголовка.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/answer_vote.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/management/commands/fill_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/management/commands/fill_db.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0002_customuser_alter_questionlike_question.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0003_alter_profile_avatar_delete_customuser.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0004_alter_profile_avatar.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0005_alter_profile_avatar.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0006_alter_profile_avatar.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0007_alter_profile_avatar.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0008_alter_profile_avatar.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0009_alter_profile_avatar.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0010_alter_profile_avatar.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0012_remove_answer_truth_checkbox.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0013_remove_answer_title.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0014_answer_answer_id.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0015_remove_answer_answer_id.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/settings.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/settings.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ask.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ask.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/layouts/answer-layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/answer-layout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/layouts/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/layouts/question-layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/question-layout.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/question.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/question.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/register.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/settings.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/settings.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,6 +53,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="KEEP" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitSEFilterConfiguration">
@@ -62,15 +77,16 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="advanced.settings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/js" />
       <recent name="$PROJECT_DIR$/media" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/static/avatars" />
       <recent name="$PROJECT_DIR$/static/images" />
-      <recent name="$PROJECT_DIR$/uploads/avatars" />
     </key>
   </component>
   <component name="RunManager">
@@ -229,6 +245,7 @@
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.css" />
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.js" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

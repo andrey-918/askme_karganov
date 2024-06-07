@@ -19,9 +19,8 @@
   margin-left: 40px;
   margin-bottom: 50px;
   ">
-    Sorry, this email address allready registred!
 </div>
-<form method="post" action="">
+<form method="post" action="" enctype="multipart/form-data">
   {% csrf_token %}
 <div class="settings-options">
     <div class="settings-option-title">
@@ -51,18 +50,11 @@
     </div>
     <input type="password" class="settings-options-input" maxlength="50" name="repeat_password"/>
 </div>
-<div class="settings-options">
-    <div class="settings-option-title">
-        Upload avatar
-    </div>
-    <div>
-        <input type="file" name="avatar">
-    </div>
-</div>
+
     <div style="
   margin-left: 20px;
   ">
-    <button class="question-button" style="width: 100px; margin-bottom: 80px">Register</button>
+    <button name="submit" class="question-button" style="width: 100px; margin-bottom: 80px">Register</button>
 </div>
 </form>
 
