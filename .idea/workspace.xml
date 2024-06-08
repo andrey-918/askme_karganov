@@ -1,42 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fbc86718-bf96-4526-b13d-df6f7d7e3e06" name="Changes" comment="dz5">
-      <change afterPath="$PROJECT_DIR$/media/avatars/3005.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/avatars/IMG_0739.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/avatars/IMG_0786.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/avatars/IMG_0876.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/avatars/IMG_0876_va5PRBS.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/avatars/IMG_0895_fTpdTMV.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/avatars/IMG_0895_k4wmdyv.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/avatars/IMG_0895_l2TlKM1.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/avatars/IMG_0895_u8eZ8ds.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/avatars/Без_заголовка.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/answer_vote.js" afterDir="false" />
+    <list default="true" id="fbc86718-bf96-4526-b13d-df6f7d7e3e06" name="Changes" comment="dz5 50%">
+      <change afterPath="$PROJECT_DIR$/media/avatars/IMG_0966.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/avatars/IMG_1065.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0002_customuser_alter_questionlike_question.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0003_alter_profile_avatar_delete_customuser.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0004_alter_profile_avatar.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0005_alter_profile_avatar.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0006_alter_profile_avatar.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0007_alter_profile_avatar.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0008_alter_profile_avatar.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0009_alter_profile_avatar.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0010_alter_profile_avatar.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0012_remove_answer_truth_checkbox.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0013_remove_answer_title.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0014_answer_answer_id.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0015_remove_answer_answer_id.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/answer_vote.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/answer_vote.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/layouts/answer-layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/answer-layout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/layouts/question-layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/question-layout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/question.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/question.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/settings.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/settings.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -240,7 +212,14 @@
       <option name="project" value="LOCAL" />
       <updated>1716132606827</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="dz5 50%">
+      <created>1717790341467</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1717790341468</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -273,6 +252,7 @@
     <MESSAGE value="nothing special" />
     <MESSAGE value="finished models and made fill_db.py" />
     <MESSAGE value="made login logout and register" />
-    <option name="LAST_COMMIT_MESSAGE" value="made login logout and register" />
+    <MESSAGE value="dz5 50%" />
+    <option name="LAST_COMMIT_MESSAGE" value="dz5 50%" />
   </component>
 </project>

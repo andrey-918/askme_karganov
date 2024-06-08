@@ -198,7 +198,7 @@ def like_async(request, answer_id):
     body = json.loads(request.body)
     answer = get_object_or_404(Answer, pk=answer_id)
     profile, profile_created = Profile.objects.get_or_create(user=request.user)
-    answer_like, answer_like_created = AnswerLike.objects.get_or_create(Answer=Answer, user=profile)
+    answer_like, answer_like_created = AnswerLike.objects.get_or_create(answer=Answer, user=profile)
 
     if not answer_like_created:
         answer_like.delete()
