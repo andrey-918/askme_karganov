@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fbc86718-bf96-4526-b13d-df6f7d7e3e06" name="Changes" comment="dz5 50%">
-      <change afterPath="$PROJECT_DIR$/media/avatars/IMG_0966.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/avatars/IMG_1065.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/answer_vote.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/answer_vote.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/layouts/answer-layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/answer-layout.html" afterDir="false" />
-    </list>
+    <list default="true" id="4ad9c790-1de7-4adc-893e-daa56ca2b21b" name="Changes" comment="dz5 50%" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
