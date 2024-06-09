@@ -189,6 +189,7 @@ def like_async(request, question_id):
         question_like.delete()
     return JsonResponse({ 'likes_count' : QuestionLike.objects.filter(question=question).count()})
 
+
 def like_async_hot(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
     profile, profile_created = Profile.objects.get_or_create(user_ptr = request.user)

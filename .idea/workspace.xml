@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4ad9c790-1de7-4adc-893e-daa56ca2b21b" name="Changes" comment="dz5.3">
-      <change afterPath="$PROJECT_DIR$/media/avatars/IMG_0739_BMUbgBa.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/avatars/IMG_0876_DvMrL62.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/avatars/IMG_1029.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/question_vote.js" afterDir="false" />
+    <list default="true" id="4ad9c790-1de7-4adc-893e-daa56ca2b21b" name="Changes" comment="dz5.4">
+      <change afterPath="$PROJECT_DIR$/media/avatars/IMG_0786_RRX40uy.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/avatars/IMG_1065_ADZzHzj.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/avatars/IMG_1105.JPG" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/askme_karganov/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/askme_karganov/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/js/answer_vote.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/answer_vote.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/question_vote.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/question_vote.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/layouts/answer-layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/answer-layout.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/layouts/question-layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/question-layout.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -237,7 +235,14 @@
       <option name="project" value="LOCAL" />
       <updated>1717829500149</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="dz5.4">
+      <created>1717941209408</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1717941209409</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -272,6 +277,7 @@
     <MESSAGE value="made login logout and register" />
     <MESSAGE value="dz5 50%" />
     <MESSAGE value="dz5.3" />
-    <option name="LAST_COMMIT_MESSAGE" value="dz5.3" />
+    <MESSAGE value="dz5.4" />
+    <option name="LAST_COMMIT_MESSAGE" value="dz5.4" />
   </component>
 </project>
