@@ -177,34 +177,39 @@ def log_in(request):
         print('Failed to login')
     return render(request, "login.html", context={"form": login_form, "popular_tags":Tag.objects.get_popular()})
 
-@require_http_methods(["POST"])
-@login_required(login_url="login")
+
+
+@require_http_methods(["POST", "GET"])
 @csrf_protect
-def like(request, Answer_id):
-    Answer = get_object_or_404(Answer, pk=Answer_id)
-    profile, profile_created = Profile.objects.get_or_create(user=request.user)
-    Answer_like, Answer_like_created = AnswerLike.objects.get_or_create(Answer=Answer, profile=profile)
+def like_async(request, question_id):
+    question = get_object_or_404(Question, pk=question_id)
+    profile, profile_created = Profile.objects.get_or_create(user_ptr = request.user)
+    question_like, question_like_created = QuestionLike.objects.get_or_create(question = question, user = profile)
+    if not question_like_created:
+        question_like.delete()
+    return JsonResponse({ 'likes_count' : QuestionLike.objects.filter(question=question).count()})
 
-    if not Answer_like_created:
-        Answer_like.delete()
+def like_async_hot(request, question_id):
+    question = get_object_or_404(Question, pk=question_id)
+    profile, profile_created = Profile.objects.get_or_create(user_ptr = request.user)
+    question_like, question_like_created = QuestionLike.objects.get_or_create(question = question, user = profile)
+    if not question_like_created:
+        question_like.delete()
+    return JsonResponse({ 'likes_count' : QuestionLike.objects.filter(question=question).count()})
 
-    return redirect(reverse('index'))
-
-
-@require_http_methods(["POST"])
-@login_required(login_url="login")
+@require_http_methods(["POST", "GET"])
 @csrf_protect
-def like_async(request, answer_id):
-    body = json.loads(request.body)
+def like_async_answer(request, answer_id):
     answer = get_object_or_404(Answer, pk=answer_id)
-    profile, profile_created = Profile.objects.get_or_create(user=request.user)
-    answer_like, answer_like_created = AnswerLike.objects.get_or_create(answer=Answer, user=profile)
-
+    profile, profile_created = Profile.objects.get_or_create(user_ptr = request.user)
+    answer_like, answer_like_created = AnswerLike.objects.get_or_create(answer = answer, user = profile)
     if not answer_like_created:
         answer_like.delete()
+    return JsonResponse({ 'likes_count' : AnswerLike.objects.filter(answer=answer).count()})
 
-    body['likes_count'] = AnswerLike.objects.filter(answer=answer).count()
-    answer.carma += 1
+def checkbox_async_answer(request, answer_id):
+    answer = get_object_or_404(Answer, pk=answer_id)
+    answer.truth_checkbox = not answer.truth_checkbox
+    checked_status = int(answer.truth_checkbox)
     answer.save()
-
-    return JsonResponse(body)
+    return JsonResponse({ 'truth_checkbox' : checked_status})

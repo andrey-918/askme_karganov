@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4ad9c790-1de7-4adc-893e-daa56ca2b21b" name="Changes" comment="dz5 50%" />
+    <list default="true" id="4ad9c790-1de7-4adc-893e-daa56ca2b21b" name="Changes" comment="dz5.3">
+      <change afterPath="$PROJECT_DIR$/media/avatars/IMG_0739_BMUbgBa.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/avatars/IMG_0876_DvMrL62.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/avatars/IMG_1029.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/question_vote.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/answer_vote.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/answer_vote.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/layouts/question-layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/question-layout.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,7 +31,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="KEEP" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -79,7 +91,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="fbc86718-bf96-4526-b13d-df6f7d7e3e06" name="Changes" comment="" />
+      <changelist id="4ad9c790-1de7-4adc-893e-daa56ca2b21b" name="Changes" comment="dz5.3" />
       <created>1712641443109</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -211,7 +223,21 @@
       <option name="project" value="LOCAL" />
       <updated>1717790341468</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="dz5 50%">
+      <created>1717829325004</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1717829325004</updated>
+    </task>
+    <task id="LOCAL-00020" summary="dz5.3">
+      <created>1717829500149</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1717829500149</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -245,6 +271,7 @@
     <MESSAGE value="finished models and made fill_db.py" />
     <MESSAGE value="made login logout and register" />
     <MESSAGE value="dz5 50%" />
-    <option name="LAST_COMMIT_MESSAGE" value="dz5 50%" />
+    <MESSAGE value="dz5.3" />
+    <option name="LAST_COMMIT_MESSAGE" value="dz5.3" />
   </component>
 </project>

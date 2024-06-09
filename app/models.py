@@ -107,7 +107,7 @@ class AnswerLike(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     class Meta:
         constraints = [
-            models.UniqueConstraint(fields=['user', 'answer'], name='unique_user_answer')
+            models.UniqueConstraint(fields=['user', 'answer'], name='unique_answerlike_user')
         ]
 
     def __str__(self):
@@ -115,7 +115,6 @@ class AnswerLike(models.Model):
 
 class QuestionLike(models.Model):
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
-    value = models.IntegerField(default=0)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     class Meta:
